@@ -10,20 +10,23 @@ const port = process.env.PORT || 4000;
 const token = '6909692960:AAF8bQSsshcz_kA6ufvwPXYfnjrkXNQRwCY';
 const bot = new TelegramBot(token, {polling: true});
 
-bot.onText('//start/', (msg) => {
+bot.onText('/start/', (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, `Hello`);
 })
+
+bot.on('message', (msg) => {
+    const chatId = msg.chat.id;
+    const username = msg.from.username;
+    const message = msg.text;
+    console.log(message);
+});
 
 bot.on('polling_error', (error) => {
     console.log(error);
 })
 
-bot.on('message', (msg) => {
-    const chatId = msg.chat.id;
-    const message = msg.text;
-    console.log(message);
-});
+
 
 
 
