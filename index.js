@@ -21,7 +21,7 @@ bot.on('message', (msg) => {
     const message = msg.text;
     console.log(message);
     if(message == 'Hi'){
-        bot.sendMessage('Hello man')
+        bot.sendMessage(chatId, 'Hello man')
     }
 });
 
