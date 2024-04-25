@@ -40,7 +40,7 @@ app.get('/', (req ,res) => {
 app.listen(port, () => console.log('serveris running'))
 
 
-// const webhookUrl = 'https://https://api.render.com/deploy/srv-col0c0md3nmc739mvmhg?key=YqUnMKFx9Is/api/telegram-bot';
+const webhookUrl = 'https://api.render.com/deploy/srv-col0c0md3nmc739mvmhg?key=YqUnMKFx9Is/api/telegram-bot';
 
-// bot.setWebHook(webhookUrl);
+bot.setWebHook(webhookUrl);
 
