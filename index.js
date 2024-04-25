@@ -20,6 +20,9 @@ bot.on('message', (msg) => {
     const username = msg.from.username;
     const message = msg.text;
     console.log(message);
+    if(message == 'Hi'){
+        bot.sendMessage('Hello man')
+    }
 });
 
 bot.on('polling_error', (error) => {
